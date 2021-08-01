@@ -59,7 +59,9 @@ class ProductController extends Controller
                 'price'      => $request->input('price'),
                 'content'    => $request->input('content'),
                 'image_path' => $request->input('image_path'),
-                'active'     => $active
+                'active'     => $active,
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now()
             ]);
             var_dump($product_id);
 
